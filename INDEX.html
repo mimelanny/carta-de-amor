@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PARA TI MI MEL HERMOSA 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ff7eb9, #ff65a3);
+      font-family: 'Arial', cursive;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #fff;
+      margin-top: 20px;
+      text-shadow: 2px 2px #f06;
+    }
+
+    .subtitle {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .envlope-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .reset {
+      margin-top: 20px;
+    }
+
+    .letter {
+      background: #fff6f9;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 250px;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+
+    .words {
+      margin: 5px 0;
+    }
+
+    .card {
+      width: 80%;
+      max-width: 600px;
+      background: #fff6f9;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      display: none;
+      transform: rotateX(90deg);
+      animation: abrirCarta 1s forwards;
+    }
+
+    .card h2 {
+      color: #ff4081;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .show {
+      display: block;
+      animation: abrirCarta 1s forwards;
+    }
+
+    @keyframes abrirCarta {
+      from {
+        transform: rotateX(90deg);
+        opacity: 0;
+      }
+      to {
+        transform: rotateX(0deg);
+        opacity: 1;
+      }
+    }
+
+    button {
+      font-family: 'Arial', cursive;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #ff4081;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffe0ec;
+    }
+
+    .heart-float {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .heart-float .heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png');
+      background-size: cover;
+      animation: float 5s linear infinite;
+      bottom: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(0.5); opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Animación del collage */
+    #collage {
+      display: none;
+      padding: 20px;
+      background: #fff6f9;
+      animation: aparecerSuave 1.2s ease forwards;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    @keyframes aparecerSuave {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>PARA TI MI MEL HERMOSA</h1>
+<p class="subtitle">amor de mi vidota entera <3</p>
+
+<!-- ✉️ Mini carta -->
+<div class="envlope-wrapper">
+  <div id="envelope" class="close">
+    <div class="letter" id="miniCarta">
+      <div class="words">To: Mi obstetra preciosa </div>
+      <div class="words">siempre estoy orgullosa de ti </div>
+      <div class="words">mi amor es sincero si se trata de ti </div>
+      <div class="words">TE EXTRAÑO MUCHO </div>
+    </div>
+  </div>
+</div>
+
+<!-- ❤️ Botones -->
+<div class="reset">
+  <button onclick="abrirCarta()">OPEN</button>
+  <button onclick="cerrarCarta()">CLOSE</button>
+</div>
+
+<!-- ❤️ CORAZONES flotantes -->
+<div class="heart-float" id="hearts"></div>
+
+<!-- 📃 CARTA PRINCIPAL -->
+<div class="card" id="carta">
+  <h2>ASI SE DESCRIBE MI AMOR</h2>
+  <p>
+    Si tuviera que explicar mi amor por ti<br>
+    la pagina no acabaria jamas.<br><br>
+
+    Tenerte conmigo es como un cuento sin final<br>
+    tenemos mucho drama con risas infaltables<br><br>
+
+    Soy el extra y tú el estelar que no me aguanta<br>
+    porque así son las historias caóticas, no pueden acabar<br>
+    porque siempre querremos más.<br><br>
+
+    Yo siempre quiero más de ti, más de tu compañía, más de tus abrazos.<br><br>
+
+    Siempre te quiero a ti, eres mi historia sin fin,<br>
+    eres mi nunca quiero acabar de leerte, de escucharte, de conocerte, de verte.<br><br>
+
+    Puede sonar literario o repetitivo, pero yo te vería siempre.<br>
+    Amo escuchar tus historias, tu día a día, me tienes para ti en lo malo y en lo bueno.<br><br>
+
+    Hay algo en ti que no encontraré jamás. Creo que es tu forma de ser conmigo,<br>
+    tu manera de demostrarme que me amas. Me doy cuenta en cosas pequeñas:<br>
+    cuando me agarras al cruzar la pista o me miras con esos ojitos lindos.<br><br>
+
+    Amo pasar mi tiempo contigo, así discutamos, seguiría a tu lado.<br>
+    Amo admirarte, observarte recién despierta, distraída o renegando.<br>
+    Eres mi protagonista para todo. En el caos yo te escojo a ti,<br>
+    mi compañera, mi persona favorita para todo.<br><br>
+
+    Gracias por amarme, por hacerme reír, por las conversaciones sin fin.<br>
+    Gracias por ser tú cuando estás conmigo. Te amo como en los kdramas:<br>
+    así de romántico, intenso y bonito. Nunca dejes de amarme,<br>
+    porque yo no lo dejaré de hacer jamás. <br><br>
+
+    Eres lo mejor que me pasó, mi mel hermosa 💕💕💕💕💕💕💕
+  </p>
+
+  <br><br>
+  <button onclick="mostrarCollage()">Terminé de leer </button>
+</div>
+
+<!-- 🎁 COLLAGE DE FOTOS -->
+<div id="collage">
+  <h2 style="color:#ff4081; font-family:'Dancing Script', cursive; font-size: 36px;"> Me encantas siempre 💞</h2>
+  <p style="color:#ff4081; font-size: 18px; font-family:'Arial', cursive;"> POR MIL AÑOS MAS A TU LADO🥺💕</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px;">
+  <img src="https://drive.google.com/thumbnail?id=1LKDKuV6LIVmytsDFmJL7KzV_OFsD82hP"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+  <img src="https://drive.google.com/thumbnail?id=1m4Nzy2XoooNnNhyqrFjbIX45Un_dtP_V"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+  <img src="https://drive.google.com/thumbnail?id=11eYhsg61Cl8mE7MLV8rt6ogMP2FfElwD"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+  <img src="https://drive.google.com/thumbnail?id=1YRJDWqAkgRxWk7Ffw74LQTOngoJz-Jo6"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+  <img src="https://drive.google.com/thumbnail?id=1YtA2Bbnfegyx5hHQJnXgHngOizrNSc9j"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+  <img src="https://drive.google.com/thumbnail?id=16dcy6C2eTIM3BfuGiQRdC0Q6RclKvxMd"
+       style="width: 160px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'"
+       onmouseout="this.style.transform='scale(1)'"/>
+
+
+  </div>
+</div>
+
+<!-- 🎵 MÚSICA -->
+<audio id="audio" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<!-- 🧠 SCRIPT -->
+<script>
+  function generarCorazonesFlotantes() {
+    const hearts = document.getElementById("hearts");
+    hearts.style.display = "block";
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0px";
+      heart.style.animationDelay = Math.random() * 2 + "s";
+      heart.style.opacity = Math.random();
+      hearts.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }, 300);
+  }
+
+  function abrirCarta() {
+    document.getElementById("miniCarta").style.display = 'none';
+    document.getElementById("carta").classList.add("show");
+
+    const audio = document.getElementById("audio");
+    audio.play().catch((e) => {
+      console.log("Audio bloqueado por el navegador:", e);
+    });
+  }
+
+  function cerrarCarta() {
+    document.getElementById("carta").classList.remove("show");
+    document.getElementById("audio").pause();
+  }
+
+  function mostrarCollage() {
+    const carta = document.getElementById("carta");
+    const collage = document.getElementById("collage");
+
+    carta.style.display = "none";
+    collage.style.display = "block";
+    collage.style.opacity = "0";
+    collage.style.animation = "none";
+    void collage.offsetWidth;
+    collage.style.animation = "aparecerSuave 1.2s ease forwards";
+  }
+
+  window.onload = generarCorazonesFlotantes;
+</script>
+
+</body>
+</html>
